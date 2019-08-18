@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".details.MovieDetails">
+
+        <Button
+            android:id="@+id/back_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/roundedbutton"
+            android:drawableStart="@drawable/back_button"
+            android:onClick="backToGridView"
+            app:layout_constraintStart_toStartOf="@+id/posterImageView"
+            app:layout_constraintTop_toTopOf="@+id/posterImageView" />
+
+        <ImageView
+            android:id="@+id/posterImageView"
+            android:layout_width="257dp"
+            android:layout_height="468dp"
+            android:layout_margin="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:foreground="@drawable/gradient_land"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/watchTrailerBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/roundedbutton"
+            android:drawableStart="@drawable/play_button"
+            app:layout_constraintBottom_toBottomOf="@+id/posterImageView"
+            app:layout_constraintEnd_toEndOf="@+id/posterImageView"
+            app:layout_constraintStart_toStartOf="@+id/posterImageView"
+            app:layout_constraintTop_toTopOf="@+id/posterImageView" />
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Title Placeholder"
+            android:textAlignment="textStart"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/h1"
+            android:typeface="normal"
+            app:layout_constraintStart_toEndOf="@+id/posterImageView"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:shadowColor="@android:drawable/dark_header" />
+
+        <LinearLayout
+            android:id="@+id/ratingBar_linearlayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/titleTextView"
+            app:layout_constraintStart_toStartOf="@+id/titleTextView"
+            app:layout_constraintTop_toBottomOf="@+id/titleTextView">
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="@style/RatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:padding="4dp"
+                android:stepSize="0.01"
+                android:textAlignment="viewStart"
+                app:layout_constraintLeft_toLeftOf="@id/titleTextView"
+                app:layout_constraintStart_toStartOf="@+id/titleTextView"
+                app:layout_constraintTop_toBottomOf="@+id/titleTextView"
+                tools:shadowColor="@android:drawable/dark_header" />
+
+            <TextView
+                android:id="@+id/vote_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingStart="8dp"
+                android:text="(0000)"
+                android:textColor="@color/titleColor"
+                app:layout_constraintBottom_toBottomOf="@+id/ratingBar"
+                app:layout_constraintEnd_toEndOf="@+id/titleTextView"
+                app:layout_constraintStart_toEndOf="@+id/ratingBar"
+                app:layout_constraintTop_toTopOf="@+id/ratingBar"
+                tools:shadowColor="@android:drawable/dark_header" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/releaseDateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:drawableStart="@drawable/calendar"
+            android:drawablePadding="8dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="XX/XX/XXXX"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/h2"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/titleTextView"
+            app:layout_constraintTop_toBottomOf="@+id/ratingBar_linearlayout"
+            tools:ignore="NotSibling" />
+
+        <TextView
+            android:id="@+id/original_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/language"
+            android:drawablePadding="8dp"
+            android:paddingBottom="8dp"
+            android:text="en"
+            android:textColor="@color/titleColor"
+            app:layout_constraintStart_toStartOf="@+id/titleTextView"
+            app:layout_constraintTop_toBottomOf="@+id/releaseDateTextView" />
+
+        <ToggleButton
+            android:id="@+id/favoritesBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/roundedbutton"
+            android:drawableStart="@drawable/ic_favorite"
+            app:layout_constraintBottom_toBottomOf="@+id/original_language"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/titleTextView" />
+
+        <TextView
+            android:id="@+id/overviewTextView"
+            android:layout_width="457dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@color/colorPrimaryDark"
+            android:maxLines="5"
+            android:padding="@dimen/paddingSmall"
+            android:scrollbars="vertical"
+            android:text="@string/overview_placeholder"
+            android:textColor="@color/titleColor"
+            android:textSize="@dimen/h5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/posterImageView"
+            app:layout_constraintTop_toBottomOf="@+id/original_language" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/reviewsRecyclerView"
+            android:layout_width="457dp"
+            android:layout_height="wrap_content"
+            android:isScrollContainer="true"
+            app:layout_constraintEnd_toEndOf="@+id/overviewTextView"
+            app:layout_constraintStart_toStartOf="@+id/overviewTextView"
+            app:layout_constraintTop_toBottomOf="@+id/overviewTextView" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

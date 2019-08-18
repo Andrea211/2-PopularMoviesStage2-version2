@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">POPULAR MOVIES</string>
+
+    <string name="image_description">image</string>
+
+    <string name="title_placeholder">Title placeholder</string>
+    <string name="number_of_votes_placeholder">(2512)</string>
+    <string name="date_placeholder">2019 &#8211; 07 &#8211; 03</string>
+    <string name="language_placeholder">en</string>
+    <string name="overview_placeholder">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+
+    <string name="menu_most_popular">MOST POPULAR</string>
+    <string name="menu_top_rated">TOP RATED</string>
+    <string name="favorites_setting">Favorite Movies</string>
+</resources>

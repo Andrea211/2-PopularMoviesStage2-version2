@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="detail_poster_height">400dp</dimen>
+
+    <dimen name="padding_8">8dp</dimen>
+    <dimen name="padding_16">16dp</dimen>
+
+    <dimen name="title_size">20sp</dimen>
+    <dimen name="overview_size">16sp</dimen>
+
+    <dimen name="h1">24sp</dimen>
+    <dimen name="h2">16sp</dimen>
+    <dimen name="h4">18sp</dimen>
+    <dimen name="h5">16sp</dimen>
+    <dimen name="p">14sp</dimen>
+    <dimen name="paddingSmall">8dp</dimen>
+    <dimen name="paddingMedium">16dp</dimen>
+
+    
+</resources>
